@@ -1,0 +1,31 @@
+Git clone projectPath: 
+
+Git pull ->
+
+Git checkout [branchName] -> 
+
+Git branch [branchName] -> 
+
+Git checkout -b [branchName] -> 
+
+Git branch: 
+
+Git add .
+
+Git commit 
+
+Git log 
+
+Git Push
+
+Git merge
+
+Git reset vs git revert
+
+Git merge vs git rebase 
+
+Git pull vs git fetch
+
+follow the steps and learn angular moduel based structure. https://www.tektutorialshub.com/angular/angular-create-first-application/
+
+
