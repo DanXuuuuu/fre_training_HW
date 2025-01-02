@@ -1,0 +1,12 @@
+<h1 [ngStyle]="{color: titlecolor}">Introduction to services and dependency injection</h1>
+<div class="container">
+    <app-change-title-card 
+    *ngFor="let card of cards" 
+    class="card" 
+    [ngStyle]="{
+        border: titlecolor === card.btncolor ? '2px solid ' + card.btncolor : ''
+    }"
+    [card]="card" 
+    (btncolor)="handleClick($event)">
+  </app-change-title-card>
+</div>
