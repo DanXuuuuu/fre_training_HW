@@ -75,11 +75,13 @@
   }
   
   ul li:hover {
-    background-color: var(--color-red-li-hover);
+    /* background-color: var(--color-red-li-hover);
+     */
+     
   }
   
   ul li {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
   }

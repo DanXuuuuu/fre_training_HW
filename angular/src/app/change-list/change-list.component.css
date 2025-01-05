@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: whitesmoke;
+  }
+  
+.container h1 {
+    align-content: flex-start;
+    margin: 10px;
+}
+
+  .left-panel {
+    flex: 3;
+    border: 2px solid black;
+    list-style: none;
+    height: 40vh;
+    border-top: none;
+    
+  }
+  
+  .list-item {
+    display: block;
+    background-color: #fff;
+    border-top: 2px solid black;
+    overflow: visible;
+    height:60px;
+  }
+
+
+
+
+  .left-panel .list-item:hover {
+    background-color: #e0e0e0; 
+  }
+
+  
+
+  .right-panel {
+    flex:2;
+    padding: 10px;
+    position: relative;
+  
+  }
+  
+  .right-panel button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+  }

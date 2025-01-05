@@ -1,0 +1,29 @@
+
+<div class="container">
+
+    <!-- left side -->
+
+    <ul class="left-panel">
+        <h1>List</h1>
+        <app-change-list-card *ngFor="let person of people"
+        (personRef)="handleClick(person)"
+        class="list-item"
+        [person]="person" 
+        [ngStyle]="{
+            'border-left': person === selectedItem ? '15px solid ' + person.color : '10px solid ' + person.color
+          }"
+          >
+
+        </app-change-list-card>
+    </ul>
+
+
+<!-- right side -->
+<div class="right-panel" *ngIf="selectedItem">
+    <h2>{{ selectedItem.name  }}</h2>
+    <p>{{  selectedItem.content  }}</p>
+    <button [ngStyle]="{'background-color': 'blue'}">Save</button>
+</div>
+ 
+</div>
+

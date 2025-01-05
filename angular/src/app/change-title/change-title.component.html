@@ -3,6 +3,10 @@
     <app-change-title-card 
     *ngFor="let card of cards" 
     class="card" 
+    [ngClass]="
+    {
+      red: titlecolor === card.btncolor
+    }"
     [ngStyle]="{
         border: titlecolor === card.btncolor ? '2px solid ' + card.btncolor : ''
     }"
