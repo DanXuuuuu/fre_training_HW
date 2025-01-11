@@ -1,0 +1,72 @@
+.movie-item {
+    position: relative;
+    max-width: 300px;
+    color: white;
+    font-family: 'Aroal',sans-serif;
+    background: linear-gradient(to bottom right, black, #65d9df);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px  20px rgba(0,0,0,0.8);
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 600px;
+    
+}
+
+.poster {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+
+
+h3{
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+
+}
+
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.movie-detail {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    background-color: #a3d1b9de;
+}
+
+.movie-overview {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #ecdede;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color:transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+
+button:hover {
+    background-color: white;
+    color: black;
+}
