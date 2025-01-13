@@ -1,0 +1,97 @@
+
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    padding: 2rem;
+    min-height: 60vh;
+
+}
+.download-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200vh;
+}
+
+.img-wrap {
+    flex: 1;
+    position: relative;
+}
+
+.show-picture {
+    width: 400px;
+    height: 320px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.text-wrap {
+    flex: 1;
+    padding: 1 2rem;
+
+  
+ 
+}
+
+.text-wrap h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-wrap p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+.black-square { 
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    height:80px;  
+    border: 1px solid gray;  
+
+  
+}
+
+
+
+.status-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.thumbnail{
+    width: 50px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 8px;
+}
+
+ 
+
+.status-text .title{
+    color: white;
+    margin-bottom: 0.2rem;
+    
+}
+
+.status-text .status {
+    color: rgb(4, 0, 255);
+    padding: 0.5rem;
+   
+}
+
+.download-icon {
+    height: 50px;
+}

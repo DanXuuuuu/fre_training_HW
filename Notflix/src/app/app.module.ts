@@ -7,6 +7,9 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TruncatePipe } from './truncate.pipe';
+import { NavBarComponent } from './components/homePages/nav-bar/nav-bar.component';
+import { FeatureComponent } from './components/homePages/feature/feature.component';
+import { DownloadPageComponent } from './components/homePages/download-page/download-page.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,9 @@ import { TruncatePipe } from './truncate.pipe';
     MovieItemComponent,
     MovieListComponent,
     TruncatePipe,
+    NavBarComponent, 
+    FeatureComponent,
+    DownloadPageComponent,
 
   ],
   imports: [

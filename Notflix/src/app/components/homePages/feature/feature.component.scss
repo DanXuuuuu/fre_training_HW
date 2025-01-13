@@ -1,0 +1,39 @@
+.feature{
+    background-color: black;
+    color: white;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10rem;
+}
+
+.text {
+    flex: 1;
+    text-align: left;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.video {
+    max-width: 40%;
+    justify-content: center;  
+    align-items: center;
+    display: flex;
+    flex: 1;
+}
+.video video{
+    height: auto;
+    width: 100%;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ 
+}
+
+
+.text h1, .text p {
+    margin: 0.5rem 0;
+}
