@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
 @Component({
@@ -9,8 +10,23 @@ import { Router } from "@angular/router";
   styleUrl: "./register.component.scss",
 })
 export class RegisterComponent {
-  constructor(private router: Router) {}
-  onSubmit() {
-    this.router.navigate(["/plan"]);
+  registerForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private router: Router) {
+    this.registerForm = this.fb.group({
+      email: ["", [Validators.required, Validators.email]],
+      password: ["", [Validators.required, Validators.minLength(6)]],
+    });
   }
+
+  onSubmit() {
+    if (this.registerForm.valid) {
+      console.log("Form Submitted:", this.registerForm.value);
+
+      this.router.navigate([
+        "/api-key"],{ queryParams: this.registerForm.value }
+      );
+    }
+  }
+
 }

@@ -4,7 +4,7 @@
     <button class="sign-in">Sign In</button>
   </nav>
 
-  <form class="apiKey-form">
+  <form class="apiKey-form" [formGroup]="apiKeyForm" (ngSubmit)="onSubmit()">
     <div class="text-box">
       <p>STEP 2 OF 3</p>
       <h1>Create a Username && Add your Tmdb Api_Key</h1>
@@ -16,17 +16,44 @@
         type="email"
         class="form-control"
         placeholder="Enter your username *"
+        formControlName="username"
         required
       />
+      <div
+        *ngIf="
+          apiKeyForm.get('username')?.touched &&
+          apiKeyForm.get('username')?.invalid
+        "
+        class="error"
+      >
+        <span>Username is required.</span>
+      </div>
     </div>
     <div class="Api_Key">
       <input
         type="password"
         class="form-control"
         placeholder="Add your Tmdb Api_Key*"
+        formControlName="apiKey"
         required
       />
+      <div
+        *ngIf="
+          apiKeyForm.get('tmdb_key')?.touched &&
+          apiKeyForm.get('tmdb_key')?.invalid
+        "
+        class="error"
+      >
+        <span *ngIf="apiKeyForm.get('tmdb_key')?.errors?.['required']">
+          API Key is required.
+        </span>
+        <span *ngIf="apiKeyForm.get('tmdb_key')?.errors?.['pattern']">
+          API Key is invalid.
+        </span>
+      </div>
     </div>
-    <button class="nextBtn">Next</button>
+    <button class="nextBtn" (click)="onSubmit()" type="submit" [disabled]="apiKeyForm.invalid">
+      Next
+    </button>
   </form>
 </div>

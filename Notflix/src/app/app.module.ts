@@ -14,6 +14,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { RegisterComponent } from './components/registerPages/register/register.component';
 import { ApiKeyComponent } from './components/registerPages/api-key/api-key.component';
 import { PlanComponent } from './components/registerPages/plan/plan.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { PlanComponent } from './components/registerPages/plan/plan.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

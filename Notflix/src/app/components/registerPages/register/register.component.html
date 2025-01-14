@@ -4,7 +4,7 @@
     <button class="sign-in">Sign In</button>
   </nav>
 
-  <form class="register-form">
+  <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="text-box">
       <p>STEP 1 OF 3</p>
       <h1>Create a password to startyour membership</h1>
@@ -16,16 +16,26 @@
         type="email"
         class="form-control"
         placeholder="Enter your email *"
+        formControlName="email"
         required
       />
+      <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid" class="error">
+        <span *ngIf="registerForm.get('email')?.errors?.['required']">Email is required.</span>
+        <span *ngIf="registerForm.get('email')?.errors?.['email']">Invalid email format.</span>
+      </div>
     </div>
     <div class="passwor-group">
       <input
         type="password"
         class="form-control"
         placeholder="Add a password *"
+        formControlName="password"
         required/>
+        <div *ngIf=" registerForm.get('password')?.touched && registerForm.get('password')?.invalid" class="error">
+          <span *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</span>
+          <span *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters.</span>
+        </div>
     </div>
-    <button class="nextBtn">Next</button>
+    <button type="submit" class="nextBtn" [disabled]="registerForm.invalid">Next</button>
   </form>
 </div>

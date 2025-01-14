@@ -7,8 +7,8 @@ import { ApiKeyComponent } from './components/registerPages/api-key/api-key.comp
 const routes: Routes = [
 
   { path: 'register', component: RegisterComponent },
-  { path: 'plan', component: PlanComponent },
   { path: 'api-key', component: ApiKeyComponent },
+  { path: 'plan', component: PlanComponent },
   { path: '', redirectTo: '/register', pathMatch: 'full' }
 
 ];
