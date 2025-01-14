@@ -10,6 +10,10 @@ import { TruncatePipe } from './truncate.pipe';
 import { NavBarComponent } from './components/homePages/nav-bar/nav-bar.component';
 import { FeatureComponent } from './components/homePages/feature/feature.component';
 import { DownloadPageComponent } from './components/homePages/download-page/download-page.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { RegisterComponent } from './components/registerPages/register/register.component';
+import { ApiKeyComponent } from './components/registerPages/api-key/api-key.component';
+import { PlanComponent } from './components/registerPages/plan/plan.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { DownloadPageComponent } from './components/homePages/download-page/down
     NavBarComponent, 
     FeatureComponent,
     DownloadPageComponent,
+    LoginPageComponent,
+    RegisterComponent,
+    ApiKeyComponent,
+    PlanComponent,
 
   ],
   imports: [

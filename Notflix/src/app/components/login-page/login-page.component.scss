@@ -1,0 +1,149 @@
+
+.login-pages {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8),
+        transparent 50%,
+        rgba(0, 0, 0, 0.8)
+      ),
+      url('/assets/pictures/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+  }
+  
+
+  .nav-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .logo {
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 1rem;
+  }
+  
+
+  .form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .form-control {
+    width: 90%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+ 
+  .password-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+
+  .btn-primary {
+    width: 95%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: #e50914;
+    color: #fff;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #f8525a;
+  }
+  
+
+  .extra-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  
+
+  .social-login {
+    margin-top: 1.5rem;
+    text-align: center;
+    
+  }
+
+
+
+
+  .btn-facebook {
+    background-color: #4267b2;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    width: 95%;
+    cursor: pointer;
+  }
+
+  .btn-facebook:hover {
+
+    cursor: pointer;
+    background-color:  #648bdb;
+  }
+ 
+ 
+
+
+  .signup-link {
+  
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .recaptcha {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    text-align: left;
+    color: #aaa;
+
+  }
+  

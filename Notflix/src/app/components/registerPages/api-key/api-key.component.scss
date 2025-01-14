@@ -1,0 +1,79 @@
+
+.nav-bar {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-bottom: 1.2px solid rgb(169, 168, 168); 
+  
+}
+
+.logo {
+    width: 120px;
+    height: 65px;
+}
+
+.sign-in {
+    background-color: #e02831ee;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.8rem; 
+    font-size: medium;
+    cursor: pointer;
+    margin: 1rem;
+    box-sizing: border-box;
+    
+}
+
+.apiKey-form{
+    padding-top: 15%;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align: start;
+}
+
+
+
+.username-group {
+ 
+    padding-bottom: 2rem;
+}
+
+.form-control{
+    border-bottom: 1.2px solid rgb(169, 168, 168); 
+    background-color: hwb(60 91% 7% / 0.879);
+    width: 90%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+ 
+}
+
+.nextBtn {
+    color: white;
+    background-color: #e02831ee ;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    width: 95%;
+    cursor: pointer;
+    margin-top: 40px;
+
+  }
+
+.nextBtn:hover {
+    background-color: #f8525a;
+  }
