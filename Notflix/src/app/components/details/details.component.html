@@ -1,0 +1,57 @@
+<div class="movie-details">
+  <app-nav-top></app-nav-top>
+  <div
+    class="background"
+    [ngStyle]="{
+      'background-image':
+        'url(' + 'https://image.tmdb.org/t/p/w1280' + backdrop_img + ')'
+    }"
+  >
+    <div class="container">
+      <div class="movie-info">
+        <div class="content">
+          <div class="text-des">
+            <h1>{{ movie.title }}</h1>
+            <p>{{ movie.overview }}</p>
+            <div class="details">
+              <span>⭐ {{ movie.vote_average | number : "1.1-1" }}</span>
+              <span>{{ movie.runtime }} mins</span>
+              <span>{{ genres }}</span>
+            </div>
+            <div class="buttons">
+              <button class="btn-play-trailer" (click)="openTrailer()">
+                Play Trailer
+              </button>
+              <button class="btn-play-now">Play Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="movie-imgs">
+        <div class="poster">
+          <h3>Poster</h3>
+          <div class="poster-carousel">
+            <img
+              *ngFor="let poster of poster_imgs"
+              [src]="'https://image.tmdb.org/t/p/w500' + poster.file_path"
+              alt="Movie Poster"
+            />
+          </div>
+        </div>
+
+        <div class="actors">
+          <h3>Actors</h3>
+          <div class="actor-list">
+            <div *ngFor="let actor of actors" class="actor-card">
+              <img
+                [src]="'https://image.tmdb.org/t/p/w500' + actor.profile_path"
+                alt="{{ actor.profile_path }}"
+              />
+              <p>{{ actor.name }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,7 +15,13 @@ import { RegisterComponent } from './components/registerPages/register/register.
 import { ApiKeyComponent } from './components/registerPages/api-key/api-key.component';
 import { PlanComponent } from './components/registerPages/plan/plan.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { NavTopComponent } from './components/homePages/nav-top/nav-top.component';
+import { CommonModule } from '@angular/common';
+import { DetailsComponent } from './components/details/details.component';
+import { TrailerComponent } from './components/trailer/trailer.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { MatDialogModule } from '@angular/material/dialog';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,15 +35,24 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     ApiKeyComponent,
     PlanComponent,
+    NavTopComponent,
+    DetailsComponent,
+    TrailerComponent
+  
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    YouTubePlayerModule,
+    MatDialogModule,
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

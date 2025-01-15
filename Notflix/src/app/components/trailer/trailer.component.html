@@ -1,0 +1,11 @@
+<!-- <p>trailer works!</p> -->
+<h1 mat-dialog-title>Movie Trailer</h1>
+<div mat-dialog-content>
+  <youtube-player
+    [videoId]="data.videoId"
+    suggestedQuality="highres"
+  ></youtube-player>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>

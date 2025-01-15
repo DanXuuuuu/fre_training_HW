@@ -1,0 +1,33 @@
+
+.nav-bar {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+   
+}
+
+.logo {
+    width: 120px;
+    height: 65px;
+}
+
+
+.sign-in{
+    background-color: #e02831ee;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    padding: 0.4rem 1.0rem;
+    font-size: medium;
+    cursor: pointer;
+    right: 0;
+}

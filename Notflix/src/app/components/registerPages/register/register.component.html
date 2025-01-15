@@ -1,8 +1,5 @@
 <div class="registerPage">
-  <nav class="nav-bar">
-    <img src="../assets/pictures/NotflixLogo.png" class="logo" />
-    <button class="sign-in">Sign In</button>
-  </nav>
+  <app-nav-top></app-nav-top>
 
   <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="text-box">

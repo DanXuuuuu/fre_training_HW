@@ -10,15 +10,15 @@ import { MoviesService } from '../../services/movies.service';
   styleUrl: './movie-list.component.scss',
 })
 export class MovieListComponent implements OnInit {
-  movies!:ResultsEntity[];
+  movies:ResultsEntity[]=[];
 
-  constructor(private moviesService: MoviesService) {}
+  constructor(private movieService: MoviesService) {}
 
   ngOnInit(): void {
-    this.moviesService.getMovies().subscribe((data:Movie) => {
+    this.movieService.getAllMovies().subscribe((data:Movie) => {
       
-      this.movies = data.results
-      console.log(this.movies)
+      this.movies = data.results;
+      console.log(this.movies);
       
     });
   }

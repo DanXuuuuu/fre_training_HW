@@ -1,5 +1,6 @@
 import { Component, Input} from '@angular/core';
 import { Movie, ResultsEntity } from '../../services/interfaces/movie.interface';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,10 @@ import { Movie, ResultsEntity } from '../../services/interfaces/movie.interface'
 export class MovieItemComponent{
   @Input() movie!:ResultsEntity;
 
+  constructor(private router:Router){}
 
-
+  navigateTodetails(id:number){
+  this.router.navigate(['/details',id])
+}
 
 }
