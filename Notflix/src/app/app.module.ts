@@ -22,6 +22,8 @@ import { TrailerComponent } from './components/trailer/trailer.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MatDialogModule } from '@angular/material/dialog';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+
 @NgModule({
   declarations: [
     AppComponent,

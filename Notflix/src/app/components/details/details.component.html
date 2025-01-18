@@ -12,21 +12,26 @@
         <div class="content">
           <div class="text-des">
             <h1>{{ movie.title }}</h1>
-            <p>{{ movie.overview }}</p>
+           
             <div class="details">
-              <span>⭐ {{ movie.vote_average | number : "1.1-1" }}</span>
+              <span class="star">⭐ {{ movie.vote_average | number : "1.1-1" }}</span>
               <span>{{ movie.runtime }} mins</span>
               <span>{{ genres }}</span>
+              <span>{{ movie.release_date | date : "yyyy" }} </span>
             </div>
+            <p class="overview">{{ movie.overview }}</p>
             <div class="buttons">
-              <button class="btn-play-trailer" (click)="openTrailer()">
-                Play Trailer
+              <button class="btn">▶︎PLAY NOW</button>
+              <button class="btn" (click)="openTrailer()">
+              TRAILER
               </button>
-              <button class="btn-play-now">Play Now</button>
+              
             </div>
           </div>
         </div>
       </div>
+
+
       <div class="movie-imgs">
         <div class="poster">
           <h3>Poster</h3>

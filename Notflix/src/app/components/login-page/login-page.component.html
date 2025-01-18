@@ -1,6 +1,3 @@
-
-
-
 <div class="login-pages">
   <header class="nav-bar">
     <img
@@ -11,15 +8,21 @@
   </header>
 
   <div class="login-form">
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <h2>Sign In</h2>
       <div class="form-group">
         <input
           type="email"
           placeholder="Email or phone number *"
           class="form-control"
+          formControlName="emailOrPhone"
           required
         />
+      
+      </div>
+      <div *ngIf="loginForm.get('emailOrPhone')?.touched && loginForm.get('emailOrPhone')?.invalid" class="error">
+        <span *ngIf="loginForm.get('emailOrPhone')?.errors?.['required']">Email or phone number is required.</span>
+        <span *ngIf="loginForm.get('emailOrPhone')?.errors?.['pattern']">Please enter a valid email address.</span>
       </div>
 
       <div class="password-group">
@@ -27,11 +30,17 @@
           type="password"
           placeholder="Enter your password *"
           class="form-control"
+          formControlName="password"
           required
         />
+
+      </div>
+      <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error">
+        <span *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</span>
+        <span *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters.</span>
       </div>
 
-      <button type="submit" class="btn-primary">Sign In</button>
+      <button type="submit" class="btn-primary" [disabled]="loginForm.invalid">Sign In</button>
 
       <div class="extra-options">
         <label> <input type="checkbox" /> Remember me </label>
@@ -39,7 +48,7 @@
       </div>
 
       <div class="social-login">
-        <button class="btn-facebook">Login with Facebook</button>
+        <button class="btn-facebook" >Login with Facebook</button>
       </div>
 
  

@@ -14,10 +14,14 @@
 }
 
 .poster {
-    width: 100%;
+    width: auto;
     border-radius: 15px;
     margin-bottom: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    height: 60%;
+    position:relative;
+
+    
 }
 
 
@@ -35,6 +39,7 @@ h3{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+   
 }
 
 
@@ -45,6 +50,7 @@ h3{
     text-align: center;
     color: white;
     background-color: #a3d1b9de;
+    width: 60px;
 }
 
 .movie-overview {

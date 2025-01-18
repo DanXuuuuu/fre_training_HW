@@ -1,17 +1,20 @@
-
 <div class="movie-item">
-
-    <img class="poster" [src]="'https://image.tmdb.org/t/p/w500'+movie.poster_path" >
-    <h3>{{ movie.title }}</h3>
-<div class="movie-details">
-  <span class="movie-detail"><strong>  {{ movie.release_date | date:'yyyy' }}    </strong></span>
-  <span class="movie-detail"><strong>  {{ movie.original_language | uppercase }}    </strong></span>
-  <span class="movie-detail"><strong>  {{ movie.vote_average | number:'1.1-1' }}    </strong></span>
-
-</div>
-    <p class="movie-overview">{{  movie.overview | truncate: 100}}</p>
-    <button (click)="navigateTodetails(movie.id)">More Details</button> 
+  <img
+    class="poster"
+    [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+  />
+  <h3>{{ movie.title }}</h3>
+  <div class="movie-details">
+    <span class="movie-detail"
+      ><strong> {{ movie.release_date | date : "yyyy" }} </strong></span
+    >
+    <span class="movie-detail"
+      ><strong> {{ movie.original_language | uppercase }} </strong></span
+    >
+    <span class="movie-detail"
+      ><strong> {{ movie.vote_average | number : "1.1-1" }} </strong></span
+    >
   </div>
-
-
-
+  <p class="movie-overview">{{ movie.overview | truncate : 50 }}</p>
+  <button (click)="navigateTodetails(movie.id)">More Details</button>
+</div>

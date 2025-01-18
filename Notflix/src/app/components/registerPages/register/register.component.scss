@@ -10,7 +10,9 @@
 .account-group {
  
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
+
 .form-control{
     border-bottom: 1.2px solid rgb(169, 168, 168); 
     background-color: hwb(60 91% 7% / 0.879);
@@ -21,6 +23,12 @@
     border-radius: 5px;
  
 }
+
+h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 
 .nextBtn {
     color: white;
@@ -39,3 +47,4 @@
 .nextBtn:hover {
     background-color: #f8525a;
   }
+ 

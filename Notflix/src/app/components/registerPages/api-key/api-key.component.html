@@ -24,7 +24,10 @@
       >
         <span>Username is required.</span>
       </div>
+
     </div>
+
+
     <div class="Api_Key">
       <input
         type="password"
@@ -35,16 +38,13 @@
       />
       <div
         *ngIf="
-          apiKeyForm.get('tmdb_key')?.touched &&
-          apiKeyForm.get('tmdb_key')?.invalid
+          apiKeyForm.get('apiKey')?.touched &&
+          apiKeyForm.get('apiKey')?.invalid
         "
         class="error"
       >
-        <span *ngIf="apiKeyForm.get('tmdb_key')?.errors?.['required']">
+        <span *ngIf="apiKeyForm.get('apiKey')?.errors?.['required']">
           API Key is required.
-        </span>
-        <span *ngIf="apiKeyForm.get('tmdb_key')?.errors?.['pattern']">
-          API Key is invalid.
         </span>
       </div>
     </div>

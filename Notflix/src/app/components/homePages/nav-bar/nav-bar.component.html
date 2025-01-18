@@ -5,9 +5,18 @@
         <h1>Unlimited movies, TV shows, and more.</h1>
         <h2>Watch anywhere. Cancel anytime.</h2>
         <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
-        <form class="email-form">
-            <input type="email" placeholder="Email Address" />
-            <button>Get Started &gt;</button>
-        </form>
+        <form class="email-form" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+            <input 
+              type="email" 
+              placeholder="Email Address" 
+              formControlName="email"  
+            /><button type="submit" [routerLink]="'/register'" [disabled]="emailForm.invalid">
+                Get Started &gt;
+              </button>
+            <div *ngIf="email?.invalid && email?.touched" class="error">
+                Please enter a valid email address.
+            </div>
+            
+            </form>
     </div>
 </div>
