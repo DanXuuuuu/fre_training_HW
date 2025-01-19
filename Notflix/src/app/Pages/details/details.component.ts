@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MoviesService } from '../../services/movies.service';
-import { Moviedetails } from '../../services/interfaces/detals.interface';
-import { CastEntity, MovieActors, MoviePoster,BackdropsEntity} from '../../services/interfaces/actors.interface';
+import { MoviesService } from '../../Core/services/movies.service';
+import { Moviedetails } from '../../Core/services/interfaces/detals.interface';
+import { CastEntity, MovieActors, MoviePoster,BackdropsEntity} from '../../Core/services/interfaces/actors.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { TrailerComponent } from '../trailer/trailer.component';
-import { Videos } from '../../services/interfaces/movie.interface';
+import { Videos } from '../../Core/services/interfaces/movie.interface';
 
 
 @Component({

@@ -33,7 +33,7 @@ export class ApiKeyComponent {
       console.log('API Key Form Submitted:', this.apiKeyForm.value);
 
       
-      this.router.navigate(['/plan'], { queryParams: this.apiKeyForm.value });
+      this.router.navigate(['register/plan'], { queryParams: this.apiKeyForm.value });
     }
   }
 }

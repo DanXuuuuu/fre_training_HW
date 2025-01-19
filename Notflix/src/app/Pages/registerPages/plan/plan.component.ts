@@ -17,4 +17,8 @@ export class PlanComponent {
     this.selectedPlan = plan;
   }
 
+  navigateToList() {
+    this.router.navigate(['/list']);
+  }
+  
 }

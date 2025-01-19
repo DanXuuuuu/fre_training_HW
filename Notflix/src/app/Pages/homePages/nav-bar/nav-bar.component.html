@@ -10,7 +10,7 @@
               type="email" 
               placeholder="Email Address" 
               formControlName="email"  
-            /><button type="submit" [routerLink]="'/register'" [disabled]="emailForm.invalid">
+            /><button type="submit" [routerLink]="['/register']" [disabled]="emailForm.invalid">
                 Get Started &gt;
               </button>
             <div *ngIf="email?.invalid && email?.touched" class="error">

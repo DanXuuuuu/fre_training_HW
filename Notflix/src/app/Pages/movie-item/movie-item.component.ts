@@ -1,5 +1,5 @@
 import { Component, Input} from '@angular/core';
-import { Movie, ResultsEntity } from '../../services/interfaces/movie.interface';
+import { Movie, ResultsEntity } from '../../Core/services/interfaces/movie.interface';
 import { Router } from '@angular/router';
 
 

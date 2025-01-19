@@ -22,10 +22,7 @@ export class RegisterComponent {
   onSubmit() {
     if (this.registerForm.valid) {
       console.log("Form Submitted:", this.registerForm.value);
-
-      this.router.navigate([
-        "/api-key"],{ queryParams: this.registerForm.value }
-      );
+      this.router.navigate(["register/api-key"], );
     }
   }
 
