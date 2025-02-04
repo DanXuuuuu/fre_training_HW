@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Router } from '@angular/router';
+import { RegistrationService } from '../../../Core/services/registration.service';
 
 @Component({
   selector: 'app-api-key',
@@ -13,27 +14,20 @@ export class ApiKeyComponent {
   apiKeyForm: FormGroup;
 
   constructor(
-    private route: ActivatedRoute,
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private registrationService:RegistrationService
   ) {
     this.apiKeyForm = this.fb.group({
       username: ['', Validators.required],
       apiKey: ['', Validators.required],
     }); 
 
-
-
-    this.route.queryParams.subscribe((params) => {
-      console.log('Received query params:', params);
-    });
   }
  onSubmit() {
     if (this.apiKeyForm.valid) {
-      console.log('API Key Form Submitted:', this.apiKeyForm.value);
-
-      
-      this.router.navigate(['register/plan'], { queryParams: this.apiKeyForm.value });
-    }
+      this.registrationService.setApiKeyData(this.apiKeyForm.value)  
+      console.log(this.registrationService.getRegistrationData())    
+     this.router.navigate(["register/plan"]);
   }
-}
+}}

@@ -150,3 +150,21 @@
   margin-top: 5px;
   text-align: center;
 }
+
+.youtube{
+  position:fixed;
+  top:20%;
+  left:25%;
+  z-index:1000;
+  padding: 30px;
+  background-color: black;
+  border-radius: 8px;
+}
+.close-btn{
+  position:relative;
+  top:-410px;
+  left:620px;
+  border:none;
+  background-color:black;
+  color:red
+}

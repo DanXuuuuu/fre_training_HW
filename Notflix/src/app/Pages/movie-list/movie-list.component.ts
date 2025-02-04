@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Movie, ResultsEntity } from '../../Core/services/interfaces/movie.interface';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Movie, ResultsEntity } from '../../Core/interfaces/movie.interface';
 import { MoviesService } from '../../Core/services/movies.service';
+import { ScrollService } from '../../Core/services/scroll.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -11,15 +12,29 @@ import { MoviesService } from '../../Core/services/movies.service';
 })
 export class MovieListComponent implements OnInit {
   movies:ResultsEntity[]=[];
-
-  constructor(private movieService: MoviesService) {}
+  page:number=1;
+  constructor(private movieService: MoviesService, private scrollService: ScrollService) {}
 
   ngOnInit(): void {
-    this.movieService.getAllMovies().subscribe((data:Movie) => {
-      
-      this.movies = data.results;
-      console.log(this.movies);
-      
+    this.movieService.movies$.subscribe(movies => {
+      this.movies = movies;
     });
+      
+
+    setTimeout(() => {
+      window.scrollTo(0, this.scrollService.getScrollPosition());
+    }, 0);
   }
-}
+
+  @HostListener('window:scroll',[])
+  onWindowScroll():void{
+    this.scrollService.saveScrollPosition(window.scrollY);
+    }
+  onScrollDown(): void {
+      this.page++;
+      this.movieService.getAllMovies(this.page).subscribe();
+    }
+  }
+ 
+
+

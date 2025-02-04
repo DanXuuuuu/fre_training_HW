@@ -20,4 +20,6 @@ describe('MovieListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  
 });

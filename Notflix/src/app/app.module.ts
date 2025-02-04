@@ -6,9 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SharedModule } from './Shared/shared.module';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
 
   ],
   imports: [
@@ -16,6 +18,7 @@ import { SharedModule } from './Shared/shared.module';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
+   
    
   ],
   providers: [

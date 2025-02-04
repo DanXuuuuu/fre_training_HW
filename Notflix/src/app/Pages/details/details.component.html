@@ -22,7 +22,7 @@
             <p class="overview">{{ movie.overview }}</p>
             <div class="buttons">
               <button class="btn">▶︎PLAY NOW</button>
-              <button class="btn" (click)="openTrailer()">
+              <button class="btn" (click)="playTrailer()">
               TRAILER
               </button>
               
@@ -30,6 +30,15 @@
           </div>
         </div>
       </div>
+    <div *ngIf="isPlay" class="youtube">
+      <div class="player">
+        <youtube-player
+        [videoId] = "selectedVideoId"
+        placeholderImageQuality="high"
+        ></youtube-player>
+        <button (click)="closePlayer()" class="close-btn">X</button>
+      </div>
+    </div>
 
 
       <div class="movie-imgs">

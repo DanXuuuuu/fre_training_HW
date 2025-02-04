@@ -4,6 +4,8 @@ import { RegisterComponent } from './register.component';
 import { ApiKeyComponent } from '../api-key/api-key.component';
 import { PlanComponent } from '../plan/plan.component';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '../../../Shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes =[
@@ -24,11 +26,16 @@ const routes: Routes =[
 
 @NgModule({
   declarations: [
+    RegisterComponent,
+    ApiKeyComponent,
+    PlanComponent
   
 
  ],
   imports: [
     CommonModule,
+    SharedModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes)
 
   ]

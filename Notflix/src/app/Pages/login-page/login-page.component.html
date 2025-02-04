@@ -1,10 +1,12 @@
 <div class="login-pages">
   <header class="nav-bar">
-    <img
+    <a routerLink="/home">
+      <img
       src="../assets/pictures/NotflixLogo.png"
       class="logo"
       alt="Notflix Logo"
     />
+    </a>
   </header>
 
   <div class="login-form">
@@ -15,14 +17,14 @@
           type="email"
           placeholder="Email or phone number *"
           class="form-control"
-          formControlName="emailOrPhone"
+          formControlName="email"
           required
         />
       
       </div>
-      <div *ngIf="loginForm.get('emailOrPhone')?.touched && loginForm.get('emailOrPhone')?.invalid" class="error">
-        <span *ngIf="loginForm.get('emailOrPhone')?.errors?.['required']">Email or phone number is required.</span>
-        <span *ngIf="loginForm.get('emailOrPhone')?.errors?.['pattern']">Please enter a valid email address.</span>
+      <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="error">
+        <span *ngIf="loginForm.get('email')?.errors?.['required']">Email or phone number is required.</span>
+        <span *ngIf="loginForm.get('email')?.errors?.['pattern']">Please enter a valid email address.</span>
       </div>
 
       <div class="password-group">
