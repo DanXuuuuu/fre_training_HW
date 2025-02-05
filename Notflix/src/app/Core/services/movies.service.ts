@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { BehaviorSubject, Observable, tap } from "rxjs";
+import { BehaviorSubject, Observable, tap, throwError } from "rxjs";
 import { Movie, ResultsEntity, Videos } from "../interfaces/movie.interface";
 import { Moviedetails } from "../interfaces/detals.interface";
 import {  MovieActors, MoviePoster } from "../interfaces/actors.interface";
@@ -32,6 +32,7 @@ export class MoviesService {
   }
 
   getMovieDetails(id: string): Observable<Moviedetails> {
+ 
     return this.http.get<Moviedetails>(`${this.baseUrl}${id}?api_key=${this.apiKey}`);
   }
 

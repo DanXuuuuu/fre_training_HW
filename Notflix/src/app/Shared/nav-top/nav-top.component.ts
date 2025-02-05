@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../Core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-top',
@@ -13,7 +14,7 @@ export class NavTopComponent implements OnInit{
   username:string = "";
   role:string = "";
   private subscriptions:any[] = [];
-  constructor(private authService:AuthService){}
+  constructor(private authService:AuthService,private router:Router){}
   ngOnInit() {
     const token = localStorage.getItem('authToken');
     if (token) {
@@ -37,5 +38,8 @@ export class NavTopComponent implements OnInit{
   }
   logout() {
     this.authService.logout();
+  }
+  changePlan(){
+    this.router.navigate(['register/upgrade-plan']);
   }
 }

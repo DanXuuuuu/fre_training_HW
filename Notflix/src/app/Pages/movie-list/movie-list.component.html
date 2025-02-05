@@ -4,6 +4,9 @@
 infiniteScroll
 [infiniteScrollDistance]="2"
 [infiniteScrollThrottle]="50"
-(scrolled)="onScrollDown()">
+(scrolled)="onScrollDown()" >
     <app-movie-item *ngFor="let movie of movies" [movie]="movie" class="movie-card"></app-movie-item>
+  
+
+      
 </div>

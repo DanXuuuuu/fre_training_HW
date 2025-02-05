@@ -76,3 +76,29 @@ button:hover {
     background-color: white;
     color: black;
 }
+
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    height: 50px;  
+  
+    h3 {
+      margin: 0;
+      flex: 1;
+    }
+  
+    mat-spinner {
+      position: absolute;
+      right: 10px;
+      width: 20px !important;
+      height: 20px !important;
+  
+      ::ng-deep circle {
+        stroke: #cd4040;
+      }
+    }
+  }

@@ -11,7 +11,7 @@ import { RegistrationService } from "../../../Core/services/registration.service
   styleUrl: "./plan.component.scss",
 })
 export class PlanComponent {
-  selectedPlan: string = "basic";
+  selectedPlan: string = "";
 
   constructor(
     private router: Router,
@@ -25,17 +25,29 @@ export class PlanComponent {
 
  
 
+  // navigateToList() {
+  //   const data = this.registrationService.getRegistrationData()
+  //   console.log(data)
+  //     this.authService.register(data).subscribe({
+  //       next: (response) => {
+  //         console.log(response)
+  //         this.router.navigate(['/list']);
+  //       }
+  //     });
+  // error: (error: unknown) => {
+  //     console.error('Error saving registration data:', error);
+  //   }
+  // }
+
   navigateToList() {
-    const data = this.registrationService.getRegistrationData()
-    console.log(data)
-      this.authService.register(data).subscribe({
-        next: (response) => {
-          console.log(response)
-          this.router.navigate(['/list']);
-        }
-      });
-  error: (error: unknown) => {
-      console.error('Error saving registration data:', error);
-    }
+    const data = this.registrationService.getRegistrationData();
+    this.authService.register(data).subscribe({
+      next: (response) => {
+        this.router.navigate(['/list']);
+      },
+      error: (error: unknown) => {
+        console.error('Error saving registration data:', error);
+      }
+    });
   }
 }

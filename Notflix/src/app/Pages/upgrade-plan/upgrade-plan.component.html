@@ -1,0 +1,67 @@
+<div class="planPage">
+    <app-nav-top></app-nav-top>
+  <div class="text-box">
+    <h1>Upgrade your plan</h1>
+
+    <ul class="features-list">
+      <p>Watch all you want. Ad-free.</p>
+      <p>Recommendations just for you.</p>
+      <p>Change or cancel your plan anytime.</p>
+    </ul>
+  </div>
+
+  <div class="plans">
+    <div class="plan-card" [class.active-plan]="selectedPlan === 'USER'" (click)="selectPlan('USER')">
+        <h3>Basic</h3>
+       
+    </div>
+    <div class="plan-card" [class.active-plan]="selectedPlan === 'ADMIN'" (click)="selectPlan('ADMIN')">
+        <h3>Standard</h3>
+   
+    </div>
+    <div class="plan-card" [class.active-plan]="selectedPlan === 'SUPERUSER'" (click)="selectPlan('SUPERUSER')">
+        <h3>Premium</h3>
+ 
+    </div>
+</div>
+
+<table class="plan-details">
+    <thead>
+        <tr>
+            <th></th>
+            <th [class.active-plan]="selectedPlan === 'USER'">Basic</th>
+            <th [class.active-plan]="selectedPlan === 'ADMIN'">Standard</th>
+            <th [class.active-plan]="selectedPlan === 'SUPERUSER'">Premium</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Monthly price</td>
+            <td [class.active-plan]="selectedPlan === 'USER'">$9.99</td>
+            <td [class.active-plan]="selectedPlan === 'ADMIN'">$15.49</td>
+            <td [class.active-plan]="selectedPlan === 'SUPERUSER'">$19.99</td>
+        </tr>
+        <tr>
+            <td>Video quality</td>
+            <td [class.active-plan]="selectedPlan === 'USER'">Good</td>
+            <td [class.active-plan]="selectedPlan === 'ADMIN'">Better</td>
+            <td [class.active-plan]="selectedPlan === 'SUPERUSER'">Best</td>
+        </tr>
+        <tr>
+            <td>Resolution</td>
+            <td [class.active-plan]="selectedPlan === 'USER'">480p</td>
+            <td [class.active-plan]="selectedPlan === 'ADMIN'">1080p</td>
+            <td [class.active-plan]="selectedPlan === 'SUPERUSER'">4K + HDR</td>
+        </tr>
+        <tr>
+            <td>Watch on your TV, computer, mobile phone, and tablet</td>
+            <td [class.active-plan]="selectedPlan === 'USER'">✔</td>
+            <td [class.active-plan]="selectedPlan === 'ADMIN'">✔</td>
+            <td [class.active-plan]="selectedPlan === 'SUPERUSER'">✔</td>
+        </tr>
+    </tbody>
+</table>
+
+  <button class="nextBtn"  (click)="upgradePlan()">Next</button>
+</div>
+

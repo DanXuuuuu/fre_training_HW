@@ -3,14 +3,22 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../../Shared/shared.module';
 import { MovieListComponent } from './movie-list.component';
+import { DetailsComponent } from '../details/details.component';
+import { MovieDetailResolver } from '../../resolver/movie-detail.resolver';
 
 
 
 const routes: Routes=[
    {path:'', component: MovieListComponent, 
-    // canActivate:[MoivesGuard],
-   }
+   },
+  //  {
+  //   path:'',
+  //   children:[
+  //     {path:'details/:id', component:DetailsComponent, }
+  //   ]
+  //  }
 ]
+
 
 
 @NgModule({

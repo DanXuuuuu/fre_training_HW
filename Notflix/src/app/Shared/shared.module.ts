@@ -15,6 +15,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import {  MatProgressSpinnerModule } from '@angular/material/progress-spinner'; 
 
 
 
@@ -28,7 +29,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
       DownloadPageComponent,
       LoginPageComponent,
       NavTopComponent,
-      DetailsComponent,
+      DetailsComponent, 
       ],
   imports: [
     CommonModule,
@@ -36,7 +37,9 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     YouTubePlayerModule,
     MatDialogModule,
     RouterModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    MatProgressSpinnerModule
+ 
   ]
   ,exports: [
     MovieItemComponent,

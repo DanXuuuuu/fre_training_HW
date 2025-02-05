@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, tap,  } from 'rxjs';
+import { BehaviorSubject, catchError, Observable, tap, throwError,  } from 'rxjs';
 import { AuthDto, Credentials, RegistrationData } from '../interfaces/auth.interface';
 import { jwtDecode } from 'jwt-decode';
 import { Router } from '@angular/router';
@@ -50,7 +50,26 @@ export class AuthService {
     this.router.navigate(['/home']);
   }
 
+
+  updateRole(role:string):Observable<any>{
+    const token = localStorage.getItem('authToken') || '';
+    return this.http.patch(
+      `${this.apiUrl}/userupdate`,
+      {role:role},
+      {headers: { Authorization: token }
+    }
+    ).pipe(
+      tap((res:any)=>{
+        this.userRole.next(res.role)
+      }),
+      catchError((error)=>{
+        console.error('Role updatefailed:', error)
+        return throwError('Role update failed!');
+      })
+    )
+  }
 }
+
 
 
 

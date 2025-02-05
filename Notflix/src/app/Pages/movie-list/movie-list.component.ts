@@ -1,7 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Movie, ResultsEntity } from '../../Core/interfaces/movie.interface';
+import { ResultsEntity } from '../../Core/interfaces/movie.interface';
 import { MoviesService } from '../../Core/services/movies.service';
 import { ScrollService } from '../../Core/services/scroll.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
@@ -12,9 +13,14 @@ import { ScrollService } from '../../Core/services/scroll.service';
 })
 export class MovieListComponent implements OnInit {
   movies:ResultsEntity[]=[];
-  page:number=1;
-  constructor(private movieService: MoviesService, private scrollService: ScrollService) {}
+  page:number=1; 
+   isLoading: boolean = false;
 
+  constructor(private movieService: MoviesService, private scrollService: ScrollService, private router: Router) {}
+
+  
+
+  
   ngOnInit(): void {
     this.movieService.movies$.subscribe(movies => {
       this.movies = movies;

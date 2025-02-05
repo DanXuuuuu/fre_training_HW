@@ -28,19 +28,19 @@ export class DetailsComponent implements OnInit {
   selectedVideoId = "";
   isPlay = false;
 
+
   constructor(
     private route: ActivatedRoute,
     private ms: MoviesService,
+    
   ) {}
 
   ngOnInit(): void {
+    this.movie = this.route.snapshot.data['movie']
     const movieId = this.route.snapshot.params["id"];
+    this.genres = this.movie.genres.map((genre)=>genre.name).join(',')
+    this.backdrop_img = this.movie.backdrop_path;
 
-    this.ms.getMovieDetails(movieId).subscribe((data: Moviedetails) => {
-      this.movie = data;
-      this.genres = this.movie.genres.map((genre) => genre.name).join(", ");
-      this.backdrop_img = this.movie.backdrop_path;
-    });
     this.ms.getMovieActor(movieId).subscribe((data: MovieActors) => {
       this.actors = data.cast;
     });
@@ -63,4 +63,5 @@ export class DetailsComponent implements OnInit {
   closePlayer() {
     this.isPlay = false;
   }
+ 
 }

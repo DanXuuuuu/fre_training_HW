@@ -5,7 +5,9 @@
     
     <div *ngIf="isLogIn">
         <span class="username">{{username}}</span>
+        <button class="change-plan" (click)="changePlan()">Change Plan</button>
         <button class="sign-out" (click)="logout()">Sign Out</button>
+       
     </div>
     
     <div *ngIf="!isLogIn">

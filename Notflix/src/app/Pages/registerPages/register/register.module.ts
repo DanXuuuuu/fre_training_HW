@@ -6,6 +6,7 @@ import { PlanComponent } from '../plan/plan.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../../../Shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UpgradePlanComponent } from '../../upgrade-plan/upgrade-plan.component';
 
 
 const routes: Routes =[
@@ -17,7 +18,7 @@ const routes: Routes =[
    
     {path:'api-key',component:ApiKeyComponent},
     {path:'plan',component:PlanComponent},
-    
+    {path:'upgrade-plan',component:UpgradePlanComponent}
 
   ]
 }

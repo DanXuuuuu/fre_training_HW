@@ -4,7 +4,8 @@ export interface RegistrationData {
     apiKey?:string;
     username?:string; 
     selectedPlan?: string;
-  
+    plan?: string;
+    role?: string;
   }
 
   export interface AuthDto {
