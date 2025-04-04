@@ -1,0 +1,55 @@
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  .undo-redo {
+    margin-bottom: 20px;
+  }
+  
+  .undo-redo button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    font-size: 1em;
+  }
+  
+  .undo-redo button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .counter h2 {
+    font-size: 3em;
+    margin: 20px 0;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+ 
+  }
+  
+  .history {
+    margin-top: 20px;
+  }
+  
+ 
+  .history ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+ 
