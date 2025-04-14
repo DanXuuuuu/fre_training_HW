@@ -37,7 +37,7 @@ export class AppComponent {
 
       this.redoStack.push(lastAction);
 
-      this.history.pop(); // Remove the last action
+      this.history.pop();  
       const action =
         lastAction > 0 ? `-${lastAction}` : `+${Math.abs(lastAction)}`;
       this.history.push(`${action} (${previousCount} -> ${this.count})`);

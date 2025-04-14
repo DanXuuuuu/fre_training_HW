@@ -1,0 +1,29 @@
+<form action="">
+
+  <div>
+    <label>
+      <input type="checkbox" [(ngModel)]="selectAll" (change)="toggleSelectAll()" name="selectAll">Select All
+    </label>
+
+ <div>
+  
+    <ul *ngFor="let movie of itemlist">
+      <li>
+        <label>
+        <input type="checkbox" [checked]="selectedMovies.includes(movie)" (click)="updateSelectedMovies(movie, $event)">{{  movie  }}
+      </label>
+      </li>
+    </ul>
+  
+ </div>
+
+    <button (click)="clearAll()">Clear All</button>
+
+    <div>
+      <h3>Selected Values:</h3>
+      <ul *ngFor="let movie of selectedMovies">
+        <li>{{  movie  }}</li>
+      </ul>
+    </div>
+  </div>
+</form>
