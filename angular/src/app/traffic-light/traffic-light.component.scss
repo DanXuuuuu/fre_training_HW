@@ -1,0 +1,47 @@
+.traffic-light-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.traffic-light {
+  width: 100px;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #666;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+
+  &.red {
+    &.active {
+      background-color: #ff0000;
+      box-shadow: 0 0 20px #ff0000;
+    }
+  }
+
+  &.yellow {
+    &.active {
+      background-color: #ffff00;
+      box-shadow: 0 0 20px #ffff00;
+    }
+  }
+
+  &.green {
+    &.active {
+      background-color: #00ff00;
+      box-shadow: 0 0 20px #00ff00;
+    }
+  }
+} 

@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="search-container">
+    <input
+      type="text"
+      [formControl]="searchControl"
+      placeholder="Search for books..."
+      class="search-input"
+    />
+  </div>
+
+  <div class="wishlist-section" *ngIf="wishlist.length > 0">
+    <h2>My Wishlist</h2>
+    <div class="wishlist-items">
+      <div class="wishlist-item" *ngFor="let book of wishlist">
+        <span class="book-title">{{ getBookTitle(book) }}</span>
+        <button 
+          class="delete-button"
+          (click)="removeFromWishlist(book.id)"
+        >
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-list" *ngIf="books$ | async as books">
+    <div class="book-card" *ngFor="let book of books.items" (click)="addToWishlist(book)">
+      <div class="book-image" *ngIf="getBookThumbnail(book)">
+        <img [src]="getBookThumbnail(book)" [alt]="getBookTitle(book)">
+      </div>
+      <div class="book-details">
+        <h3>{{ getBookTitle(book) }}</h3>
+        <p *ngIf="book?.volumeInfo?.publisher">
+          <strong>Publisher:</strong> {{ book.volumeInfo.publisher }}
+        </p>
+        <p *ngIf="book?.volumeInfo?.publishedDate">
+          <strong>Published:</strong> {{ book.volumeInfo.publishedDate }}
+        </p>
+        <p *ngIf="book?.volumeInfo?.description">
+          <strong>Description:</strong> {{ book.volumeInfo.description | slice:0:150 }}...
+        </p>
+        <div class="wishlist-indicator" *ngIf="isInWishlist(book.id)">
+          <span class="in-wishlist">✓ In Wishlist</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

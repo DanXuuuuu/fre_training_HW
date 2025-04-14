@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>My Wishlist</h2>
+  
+  <div class="wishlist-container">
+    <div class="wishlist-item" *ngFor="let book of wishlist">
+      <span class="book-title">{{ book.volumeInfo.title }}</span>
+      <button 
+        class="delete-button"
+        (click)="removeFromWishlist(book.id)"
+      >
+        Delete
+      </button>
+    </div>
+    
+    <p *ngIf="wishlist.length === 0" class="empty-message">
+      Your wishlist is empty. Add some books from the home page!
+    </p>
+  </div>
+</div>
