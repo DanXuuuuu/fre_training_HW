@@ -1,0 +1,22 @@
+<div class="game-container">
+    <h1>Emoji Memory Game</h1>
+  
+    <div class="grid">
+      <div
+        class="card"
+        *ngFor="let card of cards; index as i"
+        (click)="onCardClick(i)"
+      >
+        <div class="card-inner" [class.flipped]="card.isFlipped || card.isMatched">
+          <div class="card-front">❓</div>
+          <div class="card-back">{{ card.emoji }}</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="game-over" *ngIf="gameOver">
+      <p>🎉 You matched all pairs!</p>
+      <button (click)="initializeGame()">Play Again</button>
+    </div>
+  </div>
+  

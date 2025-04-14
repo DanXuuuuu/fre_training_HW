@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GameComponent } from './game.component';
+import { EmojiMemoryGameComponent } from './emoji-memory-game.component';
 
-describe('GameComponent', () => {
-  let component: GameComponent;
-  let fixture: ComponentFixture<GameComponent>;
+describe('EmojiMemoryGameComponent', () => {
+  let component: EmojiMemoryGameComponent;
+  let fixture: ComponentFixture<EmojiMemoryGameComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GameComponent]
+      imports: [EmojiMemoryGameComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GameComponent);
+    fixture = TestBed.createComponent(EmojiMemoryGameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
