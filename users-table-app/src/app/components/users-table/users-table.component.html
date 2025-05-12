@@ -3,10 +3,18 @@
     <table>
       <thead>
         <tr>
-          <th>Id</th>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Occupation</th>
+          <th (click)="onSort('id')" [class.sorted]="sortField() === 'id'">
+            Id
+          </th>
+          <th (click)="onSort('name')" [class.sorted]="sortField() === 'name'">
+            Name
+          </th>
+          <th (click)="onSort('age')" [class.sorted]="sortField() === 'age'">
+            Age
+          </th>
+          <th (click)="onSort('occupation')" [class.sorted]="sortField() === 'occupation'">
+            Occupation
+          </th>
         </tr>
       </thead>
       <tbody>
